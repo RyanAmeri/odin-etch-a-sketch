@@ -28,8 +28,10 @@ body,html {
     display: flex;
     flex-direction: column;
     background-color: lightgrey;
-    color: blue;
-    padding-top: 10px;
+    color: #222;
+    justify-content: start;
+    padding: 10px;
+    align-items: center;
   }
 
   button {
@@ -38,9 +40,10 @@ body,html {
     color: white;
     padding: 15px 32px;
     text-align: center;
-
-    
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+  }
+  #clear{
+      margin-bottom: 60px;
   }

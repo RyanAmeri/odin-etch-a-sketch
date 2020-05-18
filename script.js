@@ -6,6 +6,7 @@ let bgColor = "white";
 let ptColor = getRandomColor();
 let ptRandom = true;
 let rdGrid = false;
+let borderSize = 1;
 
 drawContainer(container, containerHeight, containerWidth, gridNum);
 drawGrid(container, gridNum, bgColor, ptColor);  
@@ -84,24 +85,28 @@ randomGrid.addEventListener('change', (e) => {
     drawGrid(container, gridNum, bgColor, ptColor);   
 });
 
-
+const borderSizePicker = document.getElementById("bordersize");
+borderSizePicker.addEventListener('change', (e) => {
+    borderSize = borderSizePicker.value;
+    clearContainer(container);
+    drawContainer(container, containerHeight, containerWidth, gridNum);
+    drawGrid(container, gridNum, bgColor, ptColor);   
+});
 
 function clearContainer(container){
     container.innerHTML = "";
 
 }
-
-
  
  function drawContainer(container, containerHeight, containerWidth, gridNum){
     
     const containerHeightString = containerHeight + "px";
     const containerWidthString = containerWidth + "px";
+    const borderSizeString = borderSize + "px";
     let gridText = "";
     for (let i=0; i < gridNum; i++){
         gridText += "1fr ";
     }
-
     container.style.height = containerHeightString;
     container.style.width = containerWidthString;
     container.style.border = "1px solid black";
@@ -109,8 +114,8 @@ function clearContainer(container){
     container.style.display = "grid";
     container.style.gridTemplateColumns = gridText;
     container.style.gridTemplateRows = gridText;
-    container.style.gridColumnGap = "1px";
-    container.style.gridRowGap = "1px";
+    container.style.gridColumnGap = borderSizeString;
+    container.style.gridRowGap = borderSizeString;
  }
 
  function drawGrid(container, gridNum, bgColor, ptColor){
