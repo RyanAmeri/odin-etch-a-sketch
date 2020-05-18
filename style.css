@@ -1,0 +1,46 @@
+body,html {
+    padding: 0;
+    margin: 0;
+  }
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #bigger {
+    height: 960px;
+    width: 1160px;
+    border: 0px solid black;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    grid-column-gap: 0px;
+  }
+
+  #container {
+    grid-column-start: 2;
+    grid-column-end: 12;
+
+
+  }
+
+  #sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+    color: blue;
+    padding-top: 10px;
+  }
+
+  button {
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+
+    
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
