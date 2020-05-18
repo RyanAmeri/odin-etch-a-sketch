@@ -11,11 +11,21 @@
         <div id="sidebar">
             <button id="new">Create New Grid</button>
             <button id="clear">Clear Grid</button>
-            <button id="random">Random Grid</button>
             <div id="padPanel">
                 <h3>Sketch Pad Control Panel</h3>
                 <label for="bgcolor">Select the background colour:</label>
                 <input type="color" id="bgcolor" name="bgcolor" value="#ff0000">
+                <hr>
+                <label for="ptcolor">Choose pen colour:</label>
+                <select id="ptcolor">
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option selected="selected" value="random">Random</option>
+                </select>
+                <hr>
+                <input type="checkbox" id="rdgrid" name="rdgrid">
+                <label for="rdgrid"> Random Grid</label><br>
             </div>
         </div>
         <div id="container"></div>
